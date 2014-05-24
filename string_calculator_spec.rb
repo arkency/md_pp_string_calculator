@@ -5,8 +5,9 @@ describe StringCalculator do
   let(:calculator) { StringCalculator.new }
 
   specify do
-    expect(calculator).to          respond_to(:add)
-    expect(calculator.add("") ).to eql(0)
-    expect(calculator.add("1")).to eql(1)
+    expect(calculator).           to respond_to(:add)
+    expect(calculator.add("")).   to eql(0)
+    expect(calculator.add("1")).  to eql(1)
+    expect(calculator.add("1,2")).to eql(3)
   end
 end
