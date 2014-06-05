@@ -10,7 +10,7 @@ describe StringCalculator do
   specify { expect(calculator.add("1")).  to     eql(1)           }
   specify { expect(calculator.add("1,2")).to     eql(3)           }
   specify { expect(calculator.add("1,2,3,4")).to eql(10)          }
-  specify { expect(calculator.add("1\n2\n3")).to eql(6)           }
+  specify { expect(calculator.add("1\n2,3")).to  eql(6)           }
 
   CUSTOM_DELIMITERS.sample.tap do |custom_delimiter|
     specify "adding with a custom #{custom_delimiter} delimiter" do
