@@ -14,7 +14,7 @@ describe StringCalculator do
 
   CUSTOM_DELIMITERS.sample.tap do |custom_delimiter|
     specify "adding with a custom #{custom_delimiter} delimiter" do
-      expect(calculator.add("//#{custom_delimiter} 3#{custom_delimiter}5")).to eql(8)
+      expect(calculator.add("//#{custom_delimiter}\n3#{custom_delimiter}5")).to eql(8)
     end
   end
 end
