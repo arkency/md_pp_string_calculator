@@ -10,4 +10,5 @@ describe StringCalculator do
   specify { expect(calculator.add("1,2")).to     eql(3)           }
   specify { expect(calculator.add("1,2,3,4")).to eql(10)          }
   specify { expect(calculator.add("1\n2\n3")).to eql(6)           }
+  specify { expect(calculator.add("//; 3;5")).to eql(8)           }
 end
