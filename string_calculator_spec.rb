@@ -17,4 +17,5 @@ describe StringCalculator do
   end
 
   specify { expect{calculator.add("-1,-2")}.to   raise_error(NegativesNotAllowed, "-1, -2")}
+  specify { expect(calculator.add("2,1001")).to  eql(2) }
 end
