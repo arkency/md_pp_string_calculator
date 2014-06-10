@@ -16,5 +16,5 @@ describe StringCalculator do
     specify { expect(calculator.add("//#{delimiter}\n3#{delimiter}5")).to eql(8) }
   end
 
-  specify { expect{calculator.add("-1,-2")}.to   raise_error(NegativesNotAllowed).with_message("-1 -2") }
+  specify { expect{calculator.add("-1,-2")}.to   raise_error(NegativesNotAllowed, "-1, -2")}
 end
